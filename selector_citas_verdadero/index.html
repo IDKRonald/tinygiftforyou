@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Citas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Selecciona tu fecha</h1>
+    <p>Después de la tormenta, llega la calma…</p>
+
+    <audio id="calm-audio" autoplay>
+        <source src="/selector_citas_verdadero/assets/calm.mp3" type="audio/mp3">
+    </audio>
+
+    <label for="date-picker">Elige tu cita:</label>
+    <input type="date" id="date-picker" min="2025-08-21">
+
+    <button id="submit-btn">Confirmar fecha</button>
+
+    <div id="message"></div>
+
+    <script src="firebase-config.js"></script> <!-- si usas Firebase -->
+    <script src="script.js"></script>
+</body>
+</html>

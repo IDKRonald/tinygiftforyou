@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Misterioso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fondo misterioso -->
+    <video id="bg-static" autoplay loop muted playsinline>
+        <source src="assets/static.mp4" type="video/mp4">
+    </video>
+
+    <div class="quiz-container">
+        <h1>Responde las preguntas</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <label>1. ¿Cuál es tu color favorito?</label>
+                <input type="text" name="q1">
+            </div>
+            <div class="question">
+                <label>2. ¿En qué ciudad naciste?</label>
+                <input type="text" name="q2">
+            </div>
+            <div class="question">
+                <label>3. ¿Tu animal favorito?</label>
+                <input type="text" name="q3">
+            </div>
+            <button type="submit" id="submit-btn">Enviar</button>
+        </form>
+    </div>
+
+    <script src="cuestionario.js"></script>
+</body>
+</html>
