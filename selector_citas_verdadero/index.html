@@ -11,8 +11,10 @@
     <h1>Selecciona tu fecha</h1>
     <p>Después de la tormenta, llega la calma…</p>
 
+    <!-- Audio de calma que se reproduce al entrar -->
     <audio id="calm-audio" autoplay>
-        <source src="/selector_citas_verdadero/assets/calm.mp3" type="audio/mp3">
+        <source src="assets/calm.mp3" type="audio/mp3">
+        Tu navegador no soporta audio.
     </audio>
 
     <label for="date-picker">Elige tu cita:</label>
@@ -22,7 +24,33 @@
 
     <div id="message"></div>
 
-    <script src="firebase-config.js"></script> <!-- si usas Firebase -->
-    <script src="script.js"></script>
+    <!-- Firebase clásico desde CDN -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <!-- Tu configuración de Firebase -->
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCeRHGNy9x2Liu6hRJN3TTH9d1zYkJ_NjM",
+    authDomain: "gift-4ccdd.firebaseapp.com",
+    projectId: "gift-4ccdd",
+    storageBucket: "gift-4ccdd.firebasestorage.app",
+    messagingSenderId: "1071586504959",
+    appId: "1:1071586504959:web:5b9eda86a0e41973e19cca",
+    measurementId: "G-GB5WQVKWGK"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
