@@ -1,0 +1,132 @@
+/* Reset básico y estilo body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor del televisor */
+.tv-container {
+    position: relative;
+    width: 90%;          /* se adapta al ancho de pantalla */
+    max-width: 600px;    /* límite para desktop */
+    aspect-ratio: 727 / 521; /* mantiene proporción del PNG */
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la pantalla del televisor */
+.screen-mask {
+    position: absolute;
+    top: 0%;            /* ajusta según la posición de la pantalla dentro del PNG */
+    left: 7.5%;           /* ajusta según la posición de la pantalla dentro del PNG */
+    width: 85%;          /* ancho de la pantalla dentro del marco */
+    height: 100%;         /* alto de la pantalla dentro del marco */
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 4px;  /* opcional, para suavizar bordes si quieres */
+}
+
+/* Videos dentro de la pantalla */
+#tv-video,
+#static-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: none;       /* se muestra dinámicamente con JS */
+}
+
+/* Video de estática se muestra al inicio */
+#static-video {
+    display: block;      
+    filter: brightness(1.5) contrast(1.3);
+    z-index: 0;
+}
+
+/* Video secreto */
+#tv-video {
+    filter: brightness(1.2) contrast(1.2);
+    z-index: 1;
+}
+
+/* PNG del televisor por encima */
+.tv-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;          /* siempre arriba de los videos */
+    pointer-events: none; /* para que no bloquee clicks */
+}
+
+/* Botón de empezar */
+#start-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #222;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#start-btn:hover {
+    background-color: #555;
+}
+
+/* Input de código */
+#code-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: #111;
+    color: white;
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 480px) {
+    .tv-container {
+        width: 95%;           /* un poco más ancho para móviles */
+        max-width: none;      /* quitar límite de 600px */
+    }
+
+    .screen-mask {
+        top: 0%;
+        left: 7.5%;
+        width: 85%;
+        height: 100%;
+    }
+
+    #tv-video,
+    #static-video {
+        width: 100%;
+        height: auto;
+    }
+
+    #start-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    #code-input {
+        width: 150px;
+        font-size: 14px;
+        padding: 8px;
+    }
+}

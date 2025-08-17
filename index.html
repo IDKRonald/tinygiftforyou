@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Misterio TV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<div class="tv-container">
+    <!-- Contenedor de la pantalla con máscara -->
+    <div class="screen-mask">
+        <video id="static-video" autoplay loop muted playsinline>
+            <source src="assets/static.mp4" type="video/mp4">
+        </video>
+
+        <video id="tv-video" playsinline>
+            <source src="assets/secret.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Televisor arriba (para los bordes y marco) -->
+    <img src="assets/vintv.png" alt="Televisor" class="tv-overlay">
+</div>
+
+    <button id="start-btn">Empezar</button>
+    <input type="text" id="code-input" placeholder="Ingresa los números">
+
+    <script src="script.js"></script>
 </body>
 </html>
