@@ -11,7 +11,7 @@ tvVideo.playsInline = true;
 startBtn.addEventListener('click', () => {
     const code = codeInput.value.trim();
 
-    if (code === "begginer") {
+    if (code === "beginner") {
         // Contraseña correcta: reproducir video secreto
         staticVideo.style.display = 'none';
         tvVideo.style.display = 'block';
