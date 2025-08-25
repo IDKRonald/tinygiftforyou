@@ -11,14 +11,14 @@ tvVideo.playsInline = true;
 startBtn.addEventListener('click', () => {
     const code = codeInput.value.trim();
 
-    if (code === "1234") {
+    if (code === "begginer") {
         // Contraseña correcta: reproducir video secreto
         staticVideo.style.display = 'none';
         tvVideo.style.display = 'block';
         const playPromise = tvVideo.play();
         if (playPromise !== undefined) playPromise.catch(err => console.log(err));
 
-    } else if (code === "12345") {
+    } else if (code === "1AnzfKnitb") {
         // Animación antes de redirigir al cuestionario
         const tvContainer = document.querySelector('.tv-container');
         const controls = document.querySelectorAll('#start-btn, #code-input');
