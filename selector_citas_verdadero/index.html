@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section class="poem-card">
+        <h2>La Calma Misteriosa</h2>
+        <p>La calma es el refugio de la tormenta.</p>
+    </section>
 
     <h1>Selecciona tu fecha</h1>
     <p>Después de la tormenta, llega la calma…</p>
@@ -20,11 +24,11 @@
     <!-- Formulario usando Formspree -->
     <form action="https://formspree.io/f/mldlyzdd" method="POST">
         <label for="date-picker">Elige tu cita:</label>
-        <input type="date" id="date-picker" name="fecha" min="2025-08-21" required>
+        <input type="datetime-local" id="date-picker" name="fecha" min="2025-08-21" required>
 
         <br><br>
 
-        <label for="note">Nota adicional:</label>
+        <label for="note">Nota adicional:</label><br><br>
         <textarea id="note" name="nota" placeholder="Deja alguna nota aquí..." required></textarea>
 
         <br><br>

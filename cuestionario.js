@@ -2,9 +2,9 @@ const form = document.getElementById('quiz-form');
 
 // Aquí defines las respuestas correctas
 const respuestas = {
-    q1: "rojo",
-    q2: "medellin",
-    q3: "lobo"
+    q1: "gerardfrankforever2025",
+    q2: "the-no-rights-parade",
+    q3: "thankyoufortheplectro"
 };
 
 form.addEventListener('submit', (e) => {
